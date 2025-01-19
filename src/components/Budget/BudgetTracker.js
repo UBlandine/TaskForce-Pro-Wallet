@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const BudgetTracker = () => {
-  const [budget, setBudget] = useState(1000); // Static for now, could be fetched from backend
-  const [spent, setSpent] = useState(200); // Static for now, should be calculated dynamically
+  const [budget, ] = useState(1000); // Static for now, could be fetched from backend
+  const [spent, ] = useState(200); // Static for now, should be calculated dynamically
 
   const percentageSpent = (spent / budget) * 100;
 

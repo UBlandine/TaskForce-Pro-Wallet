@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getTransactions } from '../utils/api';
+import { getTransactions } from '../../utils/api';
 
 const TransactionList = () => {
   const [transactions, setTransactions] = useState([]);

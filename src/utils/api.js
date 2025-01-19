@@ -34,3 +34,12 @@ export const createTransaction = async (transaction) => {
     console.error('Error creating transaction:', error);
   }
 };
+
+// Mock implementation of getAccounts
+export const getAccounts = async () => {
+  // Mock data
+  return [
+    { _id: '1', name: 'Savings Account', balance: 1000 },
+    { _id: '2', name: 'Checking Account', balance: 500 },
+  ];
+};
