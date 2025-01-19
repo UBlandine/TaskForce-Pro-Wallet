@@ -1,11 +1,28 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import TransactionPage from "./TransactionPage";
+import ReportsPage from "./ReportsPage";
+import BudgetPage from "./BudgetPage";
+import SettingsPage from "./SettingsPage";
 
-// Create a new React component named App
 function App() {
   return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <h1>Hello World!</h1>
-      </div>
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to="/transactions">Transactions</Link></li>
+          <li><Link to="/reports">Reports</Link></li>
+          <li><Link to="/budget">Budget</Link></li>
+          <li><Link to="/settings">Settings</Link></li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/transactions" element={<TransactionPage />} />
+        <Route path="/reports" element={<ReportsPage />} />
+        <Route path="/budget" element={<BudgetPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+      </Routes>
+    </Router>
   );
 }
 
