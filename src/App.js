@@ -1,28 +1,21 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import TransactionPage from "./TransactionPage";
-import ReportsPage from "./ReportsPage";
-import BudgetPage from "./BudgetPage";
-import SettingsPage from "./SettingsPage";
+// App.js
+import React from 'react';
+import AccountOverview from './components/account/AccountOverview';
+import TransactionList from './components/Transaction/TransactionList';
+import TransactionForm from './components/Transaction/TransactionForm';
+import BudgetTracker from './components/Budget/BudgetTracker';
+import ReportGenerator from './components/Report/ReportGenerator';
 
 function App() {
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li><Link to="/transactions">Transactions</Link></li>
-          <li><Link to="/reports">Reports</Link></li>
-          <li><Link to="/budget">Budget</Link></li>
-          <li><Link to="/settings">Settings</Link></li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/transactions" element={<TransactionPage />} />
-        <Route path="/reports" element={<ReportsPage />} />
-        <Route path="/budget" element={<BudgetPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <h1>Eric's Finance Dashboard</h1>
+      <AccountOverview />
+      <TransactionForm />
+      <TransactionList />
+      <BudgetTracker />
+      <ReportGenerator /> 
+    </div>
   );
 }
 

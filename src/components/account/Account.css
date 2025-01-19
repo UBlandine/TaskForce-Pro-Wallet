@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+}
+
+.navbar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* Set background color */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin: 1.5rem 30rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6bb0f0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: none; /* Hide dropdown by default */
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown a:hover {
+  background: #6bb0f0;
+  color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown {
+  display: flex;
+}
+
+/* Home container */
+.home {
+  height: 100vh; 
+  /* background: url('/src/image/Alx_pic-removebg.png') no-repeat center center/cover; */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  color: white;
+  position: relative; 
+  overflow: hidden;
+}
+
+/* Content container */
+.content {
+  position: relative;
+  z-index: 2; 
+}
+
+/* Heading styling */
+.content h1 {
+  font-size: 3rem; 
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+  color: white;
+  position: relative; 
+}
+
+/* Span styling - Name styling */
+.content h1 span {
+  display: block;
+  font-size: 4rem; 
+  font-weight: bold;
+  color: white;
+  position: relative; 
+  z-index: 3; 
+}
+
+
+.content p {
+  font-size: 6rem; 
+  font-weight: bold;
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  /* color: rgba(255, 255, 255, 0.05);  */
+  z-index: 3; 
+  white-space: nowrap; 
+}
